@@ -25,8 +25,18 @@ public class Main {
 class Solution {
     double power(double b, int e) {
         // code here
-        double ans=Math.pow(b,e);
-        return ans;
+        // double ans=Math.pow(b,e);
+        // return ans;
+      if(e<0)
+      return 1/power(b,-e);
+      if(e==0)
+      return 1;
+      if(e==1)
+      return b;
+      double halfpower= power(b,e/2);
+      if(e%2==0)
+      return halfpower*halfpower;
+      return b*halfpower*halfpower;
     }
 }
 
