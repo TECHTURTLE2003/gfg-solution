@@ -11,6 +11,7 @@ class Main {
         while (t-- > 0) {
             int V = sc.nextInt();
             int E = sc.nextInt();
+            int x = V;
             ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
             for (int i = 0; i < V; i++) adj.add(i, new ArrayList<Integer>());
 
@@ -23,7 +24,7 @@ class Main {
 
             ArrayList<Integer> res = new Solution().topoSort(V, edges);
 
-            if (check(adj, V, res) == true)
+            if (check(adj, x, res) == true)
                 System.out.println("true");
             else
                 System.out.println("false");
@@ -50,6 +51,8 @@ class Main {
 }
 
 // } Driver Code Ends
+
+
 
 
 class Solution {
